@@ -3,6 +3,10 @@
     <head>
         <title>Todo List</title>
         <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+        <!--jQuery Library-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- JS File -->
+        <script src= "/assets/todo-list.js"></script>
     </head>
     <body>
         <br>
@@ -14,12 +18,12 @@
                 <button type="submit">Add Item</button>
             </form>
             <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
+                <% for(var i=0; i < todos.length; i++) {%>
+                <li><%= todos[i].item %></li>
+                <% } %>
             </ul>
         </div>
-        <!--jQuery Library-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
     </body>
 </html>
