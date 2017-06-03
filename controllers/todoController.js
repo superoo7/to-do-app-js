@@ -14,17 +14,17 @@ module.exports = function(app) {
         res.render('index');
     });
     
-    app.get('/todo', urlencodedParser, function (req, res) {
+    app.get('/todo', function (req, res) {
         res.render('todo', {todos: data});
     });
-    app.post('/todo', function (req, res) {
+    app.post('/todo', urlencodedParser, function (req, res) {
         data.push(req.body);
         res.json(data);
     });
     app.delete('/todo/:item', function (req, res) {
         data = data.filter(function(todo){
             // when false, delete it
-            return todo.item.replace(/ /g, '-') !== req.params,item;
+            return todo.item.replace(/ /g, '-') !== req.params.item;
         });
         res.json(data);
     });
