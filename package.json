@@ -1,0 +1,15 @@
+{
+  "name": "to-do-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "to do app with node.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "main": "app.js",
+  "author": "superoo7 <jlwhoo7@gmail.com>",
+  "dependencies": {
+    "express": "^3.2.6"
+  },
+  "license": "MIT"
+}
